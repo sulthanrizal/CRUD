@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Siswa</title>
+</head>
+
+<body>
+    <h1>JSON CRUD (Create,Read,Update,Delete)</h1>
+    <a href="/add" class="add">Tambah</a>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Birth Date</th>
+            <th>Is Married</th>
+            <th>action</th>
+        </tr>
+        <% data.forEach((item,index)=>{%>
+            <tr>
+                <td>
+                    <%= index + 1 %>
+                </td>
+                <td>
+                    <%= item.name %>
+                </td>
+                <td>
+                    <%= item.height %>
+                </td>
+                <td>
+                    <%= item.weight %>
+                </td>
+                <td>
+                    <%= item.birthdate %>
+                </td>
+                <td>
+                    <%= item.married %>
+                </td>
+                <td>
+                    <a href="/update/<%=index%>">
+                        Update
+                    </a>
+                    <a href='/delete/<%=index%>' onclick="return notifikasi('<%=item.name%>')">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+    <script>
+        function notifikasi(item) {
+            return alert(`apakah kamu yakin akan menghapus '${item}' `)
+        }
+    </script>
+</body>
+
+
+</html>

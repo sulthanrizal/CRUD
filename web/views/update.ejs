@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <input type="text" name="nama" value="<%= updateData.name%>" placeholder="insert your name">
+        <input type="number" name="height" value="<%= updateData.height%>" placeholder="insert your height">
+        <input type="number" name="weight" value="<%= updateData.weight%>" placeholder="insert your weight">
+        <input type="date" name="birthdate" value="<%= updateData.birthdate%>">
+        <select name="married">
+            <option>
+                <%=updateData.married%>
+            </option>
+            <option value="true">Yes</option>
+            <option value="false">No Yet</option>
+        </select>
+        <button type="submit">save</button>
+        <a href="/" class="add">cancel</a>
+    </form>
+</body>
+
+</html>
