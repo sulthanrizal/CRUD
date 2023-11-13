@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(214, 239, 247, 0.461);
+}
+
+.countainer {
+    border: 5px solid #ddd;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+select {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+    background-color: #04AA6D;
+    padding: 15px;
+    color: white;
+    margin-top: 10px;
+    border: #04AA6D;
+}
+
+.cancel {
+    width: 100%;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}

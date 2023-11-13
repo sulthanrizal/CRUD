@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/add.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>From</title>
 </head>
 
-<body>
-    <form action="" method="post">
+<body class="countainer">
+    <form action="/add" method="post">
         <input type="text" name="nama" placeholder="insert your name">
         <input type="number" name="height" placeholder="insert your height">
         <input type="number" name="weight" step="0.0001" placeholder="insert your weight">
@@ -20,8 +21,7 @@
             <option value="false">Not Yet </option>
         </select>
         <button type="submit">save</button>
-        <a href="/" class="add">cancel</a>
-        </select>
+        <a href="/" class="cancel">cancel</a>
     </form>
 </body>
 
