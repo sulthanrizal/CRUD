@@ -27,8 +27,8 @@
             <th>action</th>
         </tr>
         <% data.forEach((item,index)=>{%>
-            <%if(item.married){}%>
-                <%married= "Yes" %>
+            <%if(item.married){%>
+                <%married= "Yes" }%>
                     <tr class="body">
                         <td>
                             <%= index + 1 %>
