@@ -23,11 +23,10 @@ td {
     padding: 10px;
 }
 
-th {
-    background-color: rgba(214, 239, 247, 0.461);
-}
 
-tr:nth-child(odd) {
+
+
+.body:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
