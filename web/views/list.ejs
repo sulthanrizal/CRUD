@@ -28,36 +28,66 @@
         </tr>
         <% data.forEach((item,index)=>{%>
             <%if(item.married){%>
-                <%married= "Yes" }%>
-                    <tr class="body">
-                        <td>
-                            <%= index + 1 %>
-                        </td>
-                        <td>
-                            <%= item.name %>
-                        </td>
-                        <td>
-                            <%= item.height %>
-                        </td>
-                        <td>
-                            <%= item.weight %>
-                        </td>
-                        <td>
-                            <%= item.birthdate %>
-                        </td>
-                        <td>
-                            <%= item.married %>
-                        </td>
-                        <td>
-                            <a href="/update/<%=index%>">
-                                Update
-                            </a>
-                            <a href='/delete/<%=index%>' onclick="return notifikasi('<%=item.name%>')">
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
-                    <% }) %>
+                <tr class="body">
+                    <td>
+                        <%= index + 1 %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.height %>
+                    </td>
+                    <td>
+                        <%= item.weight %>
+                    </td>
+                    <td>
+                        <%= item.birthdate %>
+                    </td>
+                    <td>
+                        <%= "Yes" %>
+                    </td>
+                    <td>
+                        <a href="/update/<%=index%>">
+                            Update
+                        </a>
+                        <a href='/delete/<%=index%>' onclick="return notifikasi('<%=item.name%>')">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+                <%}%>
+                    <%if(!item.married){%>
+                        <tr class="body">
+                            <td>
+                                <%= index + 1 %>
+                            </td>
+                            <td>
+                                <%= item.name %>
+                            </td>
+                            <td>
+                                <%= item.height %>
+                            </td>
+                            <td>
+                                <%= item.weight %>
+                            </td>
+                            <td>
+                                <%= item.birthdate %>
+                            </td>
+                            <td>
+                                <%= "Not Yet" %>
+                            </td>
+                            <td>
+                                <a href="/update/<%=index%>">
+                                    Update
+                                </a>
+                                <a href='/delete/<%=index%>' onclick="return notifikasi('<%=item.name%>')">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <%}%>
+                            <% }) %>
     </table>
     <script>
         function notifikasi(item) {
