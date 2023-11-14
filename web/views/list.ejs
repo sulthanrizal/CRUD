@@ -59,7 +59,12 @@
     </table>
     <script>
         function notifikasi(item) {
-            return alert(`apakah kamu yakin akan menghapus data '${item}' `)
+            const jawab = confirm(`apakah kamu yakin akan menghapus data '${item}'?`)
+            if (jawab) {
+                return true
+            } else {
+                return false
+            }
         }
     </script>
 </body>
