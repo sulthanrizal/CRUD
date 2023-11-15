@@ -37,10 +37,19 @@ td {
     background-color: blue;
     border-radius: 5px;
     text-align: center;
-    padding: 10px 0px;
 }
 
 a.create {
+    width: 100%;
     text-decoration: none;
+    background-color: blue;
     color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.add:hover {
+    background-color: rgb(12, 161, 241);
 }

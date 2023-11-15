@@ -43,3 +43,11 @@ button {
     padding: 15px;
     border-radius: 5px;
 }
+
+.cancel:hover {
+    background-color: rgb(12, 161, 241);
+}
+
+.save:hover {
+    background-color: #09f49e;
+}
