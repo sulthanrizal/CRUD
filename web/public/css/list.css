@@ -50,6 +50,6 @@ a.create {
     border-radius: 3px;
 }
 
-.add:hover {
+.create:hover {
     background-color: rgb(12, 161, 241);
 }

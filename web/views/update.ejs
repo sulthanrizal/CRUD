@@ -13,14 +13,18 @@
     <form action="" method="post">
         <input type="text" name="nama" value="<%= updateData.name%>" placeholder="insert your name">
         <input type="number" name="height" value="<%= updateData.height%>" placeholder="insert your height">
-        <input type="number" name="weight" value="<%= updateData.weight%>" placeholder="insert your weight">
+        <input type="number" name="weight" step="0.0001" value="<%= updateData.weight%>"
+            placeholder="insert your weight">
         <input type="date" name="birthdate" value="<%= updateData.birthdate%>">
-        <select name="married">
-            <option>
-                <%=updateData.married%>
-            </option>
-            <option value="true">true</option>
-            <option value="false">false</option>
+        <select name="married" required>
+            <%if(updateData.married){%>
+                <option value="true" selected>true</option>
+                <option value="false">false</option>
+                <%}%>
+                    <%if(!updateData.married){%>
+                        <option value="true">true</option>
+                        <option value="false" selected>false</option>
+                        <%}%>
         </select>
         <button type="submit" class="save">save</button>
         <a href="/" class="cancel">cancel</a>
