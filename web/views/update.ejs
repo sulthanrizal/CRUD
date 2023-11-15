@@ -17,14 +17,21 @@
             placeholder="insert your weight">
         <input type="date" name="birthdate" value="<%= updateData.birthdate%>">
         <select name="married" required>
-            <%if(updateData.married){%>
+            <%if(updateData.married==true){%>
+                <option value="null">Have You Married?</option>
                 <option value="true" selected>true</option>
                 <option value="false">false</option>
                 <%}%>
-                    <%if(!updateData.married){%>
+                    <%if(updateData.married==false){%>
+                        <option value="null">Have You Married?</option>
                         <option value="true">true</option>
                         <option value="false" selected>false</option>
-                        <%}%>
+                        <%}if(updateData.married==null){%>
+
+                            <option value="null" selected>Have You Married?</option>
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                            <%}%>
         </select>
         <button type="submit" class="save">save</button>
         <a href="/" class="cancel">cancel</a>

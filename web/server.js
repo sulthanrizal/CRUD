@@ -34,8 +34,11 @@ app.post('/add', (req, res) => {
     if (dataBaru.married == 'true') {
         dataBaru.married = true
         data.push(dataBaru)
-    } else {
+    } else if (dataBaru.married == "false") {
         dataBaru.married = false
+        data.push(dataBaru)
+    } else if (dataBaru.married == "null") {
+        dataBaru.married = null
         data.push(dataBaru)
     }
     fs.writeFileSync(datapath, JSON.stringify(data), 'utf-8')
